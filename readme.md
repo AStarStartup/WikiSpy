@@ -1,6 +1,10 @@
 # WikiSpy
 
-WikiSpy is a tool for monitoring Wikipedia for tampering by agents of a foreign power and political bias.
+WikiSpy is a tool to monitor Wikipedia for political bias and interference by agents of a foreign power.
+
+## Mission and Vision
+
+The mission of WikiSpy is to monitor Wikipedia for political bias and interference by agents of a foreign power. The Vision of WikiSpy is to make Wikipedia non-biased and factually correct.
 
 ## License
 
