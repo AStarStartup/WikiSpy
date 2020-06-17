@@ -1,11 +1,12 @@
-# Docs
+# [WikiSpy Requirements Analysis Document](../)
 
-This folder contains miscellaneous documentation for WikiSpy. Please consult the root repo [ReadMe.md](../) file for instructions to get started.
+## [Introduction](./)
 
-## Documents
+### Mission and Vision
 
-* [Requirements Analysis Document](./RAD/)
-* [Software Design Document](./SDD/)
+Our mission is to....
+
+Our vision is to be...
 
 ## License
 
