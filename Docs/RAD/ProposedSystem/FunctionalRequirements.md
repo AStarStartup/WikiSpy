@@ -4,12 +4,13 @@
 
 ### Functional Requirements
 
-1. The System shall create a psychological profile of the Wikipedia author.
-2. The System shall shall detect political bias.
-3. The System shall detect irregular author behavior.
-4. The System shall detect country of origin.
-5. The System shall prevent Doxing.
-6. The System shall 
+1. WikiSpy shall shall detect political bias.
+2. WikiSpy shall detect irregular author and admin behavior.
+3. WikiSpy shall detect country of origin.
+4. WikiSpy shall prevent Doxing.
+5. WikiSpy shall be transparent.
+6. WikiSpy shall detect propaganda.
+7. WikiSpy shall be under the control of the United States of America; Fuck yeah!
 
 ## License
 
