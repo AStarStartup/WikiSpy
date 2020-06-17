@@ -1,11 +1,10 @@
-# Docs
+# [WikiSpy Software Design Document](../)
 
-This folder contains miscellaneous documentation for WikiSpy. Please consult the root repo [ReadMe.md](../) file for instructions to get started.
+## [Proposed Software Architecture](./)
 
-## Documents
+### Overview
 
-* [Requirements Analysis Document](./RAD/)
-* [Software Design Document](./SDD/)
+### References
 
 ## License
 

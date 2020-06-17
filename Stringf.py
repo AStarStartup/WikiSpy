@@ -1,13 +1,13 @@
 # !/usr/bin/python
 # -*- coding: utf-8 -*-
-# Crabs @version 0.x
+# WikiSpy @version 0.x
 # @link    https://github.com/KabukiStarship/WikiSpy.git
 # @file    /Stringf.py
-# @author  Cale McCollough <https://cale-mccollough.github.io>
-# @license Copyright 2020 (C) Kabuki Starship <kabukistarship.com>; all rights 
-# reserved (R). This Source Code Form is subject to the terms of the Mozilla 
-# Public License, v. 2.0. If a copy of the MPL was not distributed with this 
-# file, you can obtain one at <https://mozilla.org/MPL/2.0/>.
+# @author  Cale McCollough <https://CookingWithCale.github.io>
+# @license Copyright 2020 (C) Kabuki Starship <kabukistarship.com>. This Source 
+# Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a 
+# copy of the MPL was not distributed with this file, you can obtain one at 
+# <https://mozilla.org/MPL/2.0/>.
 import sys
 
 # Constants
@@ -24,7 +24,8 @@ class Stringf:
   # @param StartingString The string to print first that starts with a new line 
   #   char.
   @staticmethod
-  def Indent(IndentLevel = 0, Item = "", StartingString = "\n", Delimiter = " "):
+  def Indent(IndentLevel = 0, Item = "", StartingString = "\n", 
+             Delimiter = " "):
     SpaceCount = int(IndentLevel * StringfTabSize)
     return StartingString + (Delimiter * SpaceCount) + Item
 
@@ -47,7 +48,7 @@ class Stringf:
     #      ' Token="')
     Char = String[Cursor]
     while Char > ' ':
-      sys.stdout.write(Char)
+      #sys.stdout.write(Char)
       Cursor += 1
       if Cursor >= len(String): return Cursor
       Char = String[Cursor]
