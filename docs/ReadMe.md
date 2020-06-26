@@ -1,12 +1,11 @@
-# [WikiSpy Requirements Analysis Document](../)
+# Docs
 
-## [Introduction](./)
+This folder contains the WikiSpy Jekyll website. Please consult the root repo [ReadMe.md](../) file for instructions to get started.
 
-### Mission and Vision
+## Documents
 
-Our mission is to....
-
-Our vision is to be...
+* [Requirements Analysis Document](./RAD/)
+* [Software Design Document](./SDD/)
 
 ## License
 

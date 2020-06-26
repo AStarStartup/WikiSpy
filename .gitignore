@@ -39,6 +39,7 @@ bld/
 .vs/
 
 # Jekyll files
+.jekyll-cache/
 .sass-cache/
 _site/
 
