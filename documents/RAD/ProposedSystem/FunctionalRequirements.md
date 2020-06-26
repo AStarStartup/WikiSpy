@@ -11,6 +11,7 @@
 5. WikiSpy shall be transparent.
 6. WikiSpy shall detect propaganda.
 7. WikiSpy shall be under the control of the United States of America; Fuck yeah!
+8. WikiSpy shall compare all Wikipedia-like websites.
 
 ## License
 
