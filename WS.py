@@ -49,7 +49,7 @@ class WikiSpy(CRAbs):
     CRAbs.Test(self)
     self.COut ("> WikiSpy Test")
     #self.Do("Intake > ?")
-    wikipedia.search("Barack")
+    wikipedia.search("Foo")
     self.COut ("< ? Done testing WikiSpy Test <")
   
 if __name__ == '__main__':

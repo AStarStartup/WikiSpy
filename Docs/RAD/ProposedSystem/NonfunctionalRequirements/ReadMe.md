@@ -2,7 +2,7 @@
 
 ## [Proposed System](../)
 
-### [Nonfunctional Requirements](./)
+### Nonfunctional Requirements
 
 ## License
 

@@ -22,7 +22,7 @@ from CRNode import *
 # ```
 class CRRoom(CRNode):
   
-  # Constructs a Duck 
+  # Constructs a Duck.
   def __init__(self, Crabs, Type ="Room"):
     CRNode.__init__(self, Crabs, Crabs.RIDNext (), Type)
     self.Meta["Directions"] = ""
