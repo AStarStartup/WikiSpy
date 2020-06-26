@@ -156,8 +156,8 @@ class CRAbs(CRRoom):
     self.COut("or press '!'")
     self.COut("or type 'exit' to exit the console.")
     while True:
-      COut.Print2 ("\n", self.Top.Path())
-      UserInput = raw_input("")#.lower()
+      COut.Print2 ('\n', self.Top.Path())
+      UserInput = input("")#.lower()
       if UserInput == "exit":
         return
       Result = self.Do(UserInput)
@@ -201,5 +201,6 @@ class CRAbs(CRRoom):
     return self.Command(self, Command, Cursor)
   
   def Test(self):
-    self.COut("? Testing Crabs <\n\n")
-    self.COut("? Done testing Crabs <\n\n")
+    self.COut("? Testing Crabs. <\n\n")
+    # Test me!
+    self.COut("? Done testing Crabs. <\n\n")

@@ -60,26 +60,6 @@ class CRNode:
   def DepthCounterReset(self, Crabs, Command, Cursor):
     return Crabs.DepthCounterReset
   
-  # Pushes this node on the Crabs stack.
-  def Push(self, Crabs, Command, Cursor):
-    return Crabs.Push(self, Command, Cursor)
-  
-  # Pushes this node on the Crabs stack.
-  def PushParent(self, Crabs, Command, Cursor):
-    return Crabs.Push(self.Parent, Command, Cursor)
-  
-  # Pops this node off of the Crabs stack.
-  def Pop(self, Crabs, Command, Cursor):
-    return Crabs.Pop(Command, Cursor)
-  
-  # Pops this node off of the Crabs stack.
-  def PopAll(self, Crabs, Command, Cursor):
-    return Crabs.PopAll(Command, Cursor)
-  
-  # Resets the push count.
-  def PushCountReset(self):
-      self.CommandPushCount = 0
-  
   # Gets the length of the path from the root.
   def PathDepth(self, Length = 0):
     Parent = self.Parent
@@ -139,11 +119,31 @@ class CRNode:
   def Metadata(self, Key, Value):
       self.Meta[Key] = Value
   
+  # Pushes this node on the Crabs stack.
+  def Push(self, Crabs, Command = None, Cursor = 0):
+    return Crabs.Push(self, Command, Cursor)
+  
+  # Pushes this node on the Crabs stack.
+  def PushParent(self, Crabs, Command, Cursor):
+    return Crabs.Push(self.Parent, Command, Cursor)
+  
+  # Resets the push count.
+  def PushCountReset(self):
+      self.CommandPushCount = 0
+  
+  # Pops this node off of the Crabs stack.
+  def Pop(self, Crabs, Command = None, Cursor = 0):
+    return Crabs.Pop(Command, Cursor)
+  
+  # Pops this node off of the Crabs stack.
+  def PopAll(self, Crabs, Command = None, Cursor = 0):
+    return Crabs.PopAll(Command, Cursor)
+  
   # Adds a Key-Value pair to the Children or Meta
   def Add(self, Crabs, Key, Value, Command = None, Cursor = 0):
     self.COut("? Adding Key " + Key + " <")
     self.Children[Key] = Value
-    return self.Pop(Crabs, Command, Cursor)
+    return Crabs.Pop(Command, Cursor)
   
   # Removes the given Key from the Meta
   def Remove(self, Key):
@@ -260,7 +260,7 @@ class CRNode:
     if self == self.Parent:
       return "><"
     self.COut("? Searching for Key for NID:" + str(self.NID) + " <")
-    for Key, Value in self.Parent.Children.iteritems():
+    for Key, Value in self.Parent.Children.items():
       self.COut("? comparing to Key \"" + Key + "\" NID " + str(Value.NID))
       if Value == self:
         return Key
@@ -320,6 +320,9 @@ class CRNode:
   
   # Runs the common commands and returns None if no commands were executed.
   def CommandSuper(self, Crabs, Command, Cursor):
+    print('\n\n\n? CommandSuper Command=\'')
+    print(Command)
+    print('\'')
     if Command == None or Cursor >= len(Command): return None
     if Command == "": return None
     self.COut("#Super " + Command)
@@ -336,7 +339,7 @@ class CRNode:
       if Char > '\n':
         if Char != ' ':
           return Crabs.Push(self.ChildNumber(int(Char - '\n')),
-                              Command, Cursor)
+                            Command, Cursor)
       Cursor += 1
       if Cursor >= len(Command): return None
       Char = Command[Cursor]
@@ -423,5 +426,5 @@ class CRNode:
     self.Command(Crabs, Command, Cursor)
     if self.ModeStackRestore:
       for X in range(self.StackPushCount):
-        self.Pop(Crabs)
+        self.Pop(Crabs, Command, Cursor)
       self.StackPushCount = 0
