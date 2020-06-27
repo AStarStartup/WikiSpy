@@ -1,6 +1,10 @@
-# Docs
+# WikiSpy
 
-This folder contains the WikiSpy Jekyll website. Please consult the root repo [ReadMe.md](../) file for instructions to get started.
+Welcome to WikiSpy, a tool for monitoring Wikipedia for tampering by hostile agents and political bias. WikiSpy is a new project that is in it's infancy.
+
+## How to Contribute
+
+If you would like to contribute to WikiSpy, you can start by forking the WikiSpy repo on GitHub at <https://github.com/AStarStartup/WikiSpy>. If you don't know how to work with the Git Revision Control System please read the GitHib tutorials at <https://guides.github.com/>.
 
 ## Documents
 

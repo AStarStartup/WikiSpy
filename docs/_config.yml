@@ -1,5 +1,5 @@
 # (string) Title of your wiki
-title: git-wiki
+title: WikiSpy
 demo_ver: 1.0.1
 remote_theme: Drassil/git-wiki-theme@865e801
 description: WikiSpy - a tool for monitoring Wikipedia for tampering by hostile actors and political bias.
