@@ -2,7 +2,9 @@
 
 ## [Introduction](./)
 
-### Current Systemd
+### Current System
+
+The current system is Wikipedia, the Chinese Communist Party's version of Wikipedia, and other existing Wikipedia-like sites.
 
 ## License
 

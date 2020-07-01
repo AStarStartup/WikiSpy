@@ -6,6 +6,8 @@
 
 ### Reliability
 
+WikiSpy shall use the highest accuracy Artificial Intelligence and Machine Learning algorithms possible, with the exception of KabukiNet code.
+
 ## License
 
 Copyright © 2020 [Kabuki Starship](https://kabukistarship.com).

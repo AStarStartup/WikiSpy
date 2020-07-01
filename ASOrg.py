@@ -12,7 +12,7 @@
 import CRRoom
 
 class ASBusiness(CRRoom):
-
+  
   def __init__(self):
     CRRoom.__init__(self)
   
@@ -26,7 +26,7 @@ class ASBusiness(CRRoom):
   # Function that is called every x seconds to update everything.
   def Update(self):
     CRRoom.Update(self)
-
+  
   # Super-user Do.
   def Do(self, Command, Cursor = 0):
     return None

@@ -6,6 +6,8 @@
 
 ### Supportability
 
+WikiSpy shall have be able to be supported using a Revision Control System Issue Tracking System.
+
 ## License
 
 Copyright © 2020 [Kabuki Starship](https://kabukistarship.com).

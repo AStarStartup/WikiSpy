@@ -6,6 +6,8 @@
 
 ### Performance
 
+WikiSpy shall be able to respond to Wikipedia edits in a short period of time.
+
 ## License
 
 Copyright © 2020 [Kabuki Starship](https://kabukistarship.com).

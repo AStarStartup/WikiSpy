@@ -6,6 +6,8 @@
 
 ### Usability
 
+WikiSpy shall be a
+
 ## License
 
 Copyright © 2020 [Kabuki Starship](https://kabukistarship.com).
