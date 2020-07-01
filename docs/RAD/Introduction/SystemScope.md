@@ -4,6 +4,8 @@
 
 ### System Scope
 
+The Scope of the System is to be able to detect hostile actors and political bias on Wikipedia.
+
 ## License
 
 Copyright © 2020 [Kabuki Starship](https://kabukistarship.com).

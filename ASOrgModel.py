@@ -9,9 +9,9 @@
 # copy of the MPL was not distributed with this file, you can obtain one at 
 # <https://mozilla.org/MPL/2.0/>.
 
-"""A Business model based on the Business model canvas.
+"""A Org model based on the Org model canvas.
 """
-class ASBusinessModel(CRNode):
+class ASOrgModel(CRNode):
 
   def __init__(self, Crabs, TypeID = 0, Type = "BussinessModel"):
     CRNode.__init__(self, Crabs, 1, "BussinessModel")
@@ -24,6 +24,7 @@ class ASBusinessModel(CRNode):
     self.CustomerSegments = {}
     self.CostStructure = {}
     self.RevenueStreams = {}
+    self.StateNext = None #< Pointer to the next State
   
   # Handler for the Monitor Process state.
   def StateMonitorHandle(self):

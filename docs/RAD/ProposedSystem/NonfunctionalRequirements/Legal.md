@@ -6,6 +6,8 @@
 
 ### Legal
 
+WikiSpy shall comply with the laws of the United States.
+
 ## License
 
 Copyright © 2020 [Kabuki Starship](https://kabukistarship.com).

@@ -4,6 +4,8 @@
 
 ### System Purpose
 
+The purpose of WikiSpy is to monitor Wikipedia for tampering by hostile actors and political bias, so basically the purpose is a counter-espionage tool that monitors Wikipedia contributors and contributions without breaking any US laws or harming innocent contributors.
+
 ## License
 
 Copyright © 2020 [Kabuki Starship](https://kabukistarship.com).

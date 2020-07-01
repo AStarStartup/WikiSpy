@@ -6,6 +6,8 @@
 
 ### Packaging
 
+WikiSpy shall be able to be distributed using a standard Container system.
+
 ## License
 
 Copyright © 2020 [Kabuki Starship](https://kabukistarship.com).
