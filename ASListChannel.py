@@ -1,8 +1,8 @@
-#!/usr/bin/python
+# !/usr/bin/python
 # -*- coding: utf-8 -*-
 # WikiSpy @version 0.x
 # @link    https://github.com/AStarStartup/WikiSpy.git
-# @file    /CRProcess.py
+# @file    /ASListChannel.py
 # @author  Cale McCollough <https://CookingWithCale.github.io>
 # @license Copyright 2020 (C) Kabuki Starship <kabukistarship.com>. This Source 
 # Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a 
@@ -11,8 +11,19 @@
 
 from CRNode import *
 
-class CRMission(CRNode):
+"""A list of distribution Channel(s).
+"""
+class ASListChannel(CRNode):
+
+  def __init__(self, Crabs, TypeID = 0, Type = "ListChannel"):
+    CRNode.__init__(self, Crabs, 1, Type)
+    self.Channels = {}
   
-  # Creates a Duck.
-  def __init__(self, Crabs, Type = "Mission"):
-    CRNode.__init__(self, Crabs, Crabs.MIDNext(), Type)
+  def Print(self):
+    print('\nChannels:')
+    for Key, Value in self.Channels.items():
+      print('\nKey:"', Key, ' Value:"', Value)
+  
+  # Super-user Do.
+  def Do(self, Command, Cursor = 0):
+    return None

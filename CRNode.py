@@ -1,7 +1,7 @@
 # !/usr/bin/python
 # -*- coding: utf-8 -*-
 # WikiSpy @version 0.x
-# @link    https://github.com/KabukiStarship/WikiSpy.git
+# @link    https://github.com/AStarStartup/WikiSpy.git
 # @file    /CRNode.py
 # @author  Cale McCollough <https://CookingWithCale.github.io>
 # @license Copyright 2020 (C) Kabuki Starship <kabukistarship.com>. This Source 
@@ -28,6 +28,7 @@ class CRNode:
   ScanningChildKey = 1         #< Scanning a Child key.
   ScanningMetaKey  = 2         #< Scanning a metadata key.
   
+  # Constructor initializes this object using the Crabs to automate the next NID.
   def __init__(self, Crabs, TypeID = 0, Type = ""):
     self.Parent = Crabs.Top    #< This node's parent.
     self.NID = Crabs.NIDNext() #< The globally unique Node ID.
@@ -100,7 +101,7 @@ class CRNode:
   def Save(self, URI):
     pass
   
-  # Gets the Member with the given Key
+  # Gets the Member with the given Key.
   def Get (self, Key):
     if (Key not in self.Meta): return None
     return self.Meta[Key]
@@ -115,7 +116,7 @@ class CRNode:
   def ChildNumber(self, Index): 
       return self.Children.values()[Index]
   
-  # Adds a Key-Value pair to the Children or Meta
+  # Adds a Key-Value pair to the Children or Meta.
   def Metadata(self, Key, Value):
       self.Meta[Key] = Value
   

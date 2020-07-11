@@ -1,31 +1,28 @@
 # !/usr/bin/python
 # -*- coding: utf-8 -*-
 # WikiSpy @version 0.x
-# @link    https://github.com/KabukiStarship/WikiSpy.git
-# @file    /CRAbs.py
+# @link    https://github.com/AStarStartup/WikiSpy.git
+# @file    /ASOrgModelPartners.py
 # @author  Cale McCollough <https://CookingWithCale.github.io>
 # @license Copyright 2020 (C) Kabuki Starship <kabukistarship.com>. This Source 
 # Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a 
 # copy of the MPL was not distributed with this file, you can obtain one at 
 # <https://mozilla.org/MPL/2.0/>.
 
-import CRRoom
+from CRNode import *
 
-class ASBusiness(CRRoom):
+"""A list of Partner(s) of an Organization.
+"""
+class ASListPartner(CRNode):
+
+  def __init__(self, Crabs, TypeID = 0, Type = "ListPartner"):
+    CRNode.__init__(self, Crabs, 1, Type)
+    self.Partners = {}
   
-  def __init__(self):
-    CRRoom.__init__(self)
-  
-  # Handler for the Monitor Process state.
-  def StateMonitorHandle(self):
-    CRRoom.StateMonitorHandle(self)
-  
-  def StateShutDownHandle(self):
-    CRRoom.StateShutDownHandle(self)
-  
-  # Function that is called every x seconds to update everything.
-  def Update(self):
-    CRRoom.Update(self)
+  def Print(self):
+    print('\nPartners:')
+    for Key, Value in self.Partners.items():
+      print('\nKey:"', Key, ' Value:"', Value)
   
   # Super-user Do.
   def Do(self, Command, Cursor = 0):
