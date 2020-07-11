@@ -2,13 +2,13 @@
 
 ## [System Models](../../../../)
 
-## [Proposed system]](../../../)
+## [Proposed system](../../../)
 
 ### [System models](../../)
 
 #### [Scenarios](./)
 
-##### Use Case: UseCaseFactCheckArticle
+##### UseCaseFactCheckArticle
 
 ***Participating Actors***
 

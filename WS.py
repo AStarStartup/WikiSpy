@@ -1,7 +1,7 @@
 # !/usr/bin/python
 # -*- coding: utf-8 -*-
 # WikiSpy @version 0.x
-# @link    https://github.com/KabukiStarship/WikiSpy.git
+# @link    https://github.com/AStarStartup/WikiSpy.git
 # @file    /WikiSpy.py
 # @author  Cale McCollough <https://CookingWithCale.github.io>
 # @license Copyright 2020 (C) Kabuki Starship <kabukistarship.com>. This Source 
@@ -42,15 +42,7 @@ class WikiSpy(CRAbs):
     N.Meta["Description"] = "The Room where all of the unused devices are "\
                             "stored in."
     self.Add(self, "Devices", N)
-    self.Test()
     self.ConsoleMain()
-  
-  def Test(self):
-    CRAbs.Test(self)
-    self.COut ("> WikiSpy Test")
-    #self.Do("Intake > ?")
-    wikipedia.search("Foo")
-    self.COut ("< ? Done testing WikiSpy Test <")
   
 if __name__ == '__main__':
   WikiSpy = WikiSpy()

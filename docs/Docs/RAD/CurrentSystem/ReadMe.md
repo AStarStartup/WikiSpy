@@ -4,7 +4,7 @@
 
 ### Current System
 
-The current system is Wikipedia, the Chinese Communist Party's version of Wikipedia, and other existing Wikipedia-like sites.
+The current system is Wikipedia, the Chinese Communist Party's version of Wikipedia, other existing Wikipedia-like sites, TensorFlow, and Serial [Chinese Room, Interprocess, and Telemetry (SCRIPT) Script (Script2)](https://github.com/KabukiStarship/Script2).
 
 ## License
 

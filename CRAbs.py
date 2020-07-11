@@ -1,7 +1,7 @@
 # !/usr/bin/python
 # -*- coding: utf-8 -*-
 # WikiSpy @version 0.x
-# @link    https://github.com/KabukiStarship/WikiSpy.git
+# @link    https://github.com/AStarStartup/WikiSpy.git
 # @file    /CRAbs.py
 # @author  Cale McCollough <https://CookingWithCale.github.io>
 # @license Copyright 2020 (C) Kabuki Starship <kabukistarship.com>. This Source 
@@ -201,6 +201,6 @@ class CRAbs(CRRoom):
     return self.Command(self, Command, Cursor)
   
   def Test(self):
-    self.COut("? Testing Crabs. <\n\n")
+    print("? Testing Crabs. <\n\n")
     # Test me!
-    self.COut("? Done testing Crabs. <\n\n")
+    print("? Done testing Crabs. <\n\n")

@@ -1,7 +1,7 @@
 # !/usr/bin/python
 # -*- coding: utf-8 -*-
 # WikiSpy @version 0.x
-# @link    https://github.com/KabukiStarship/WikiSpy.git
+# @link    https://github.com/AStarStartup/WikiSpy.git
 # @file    /CRRoom.py
 # @author  Cale McCollough <https://CookingWithCale.github.io>
 # @license Copyright 2020 (C) Kabuki Starship <kabukistarship.com>. This Source 
