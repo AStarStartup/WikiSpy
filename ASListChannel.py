@@ -15,7 +15,8 @@ from CRNode import *
 """
 class ASListChannel(CRNode):
 
-  def __init__(self, Crabs, TypeID = 0, Type = "ListChannel"):
+  def __init__(self, Crabs, TypeID = 0, Type = 'ListChannel', Command = None, 
+               Cursor = 0):
     CRNode.__init__(self, Crabs, 1, Type)
     self.Channels = {}
   

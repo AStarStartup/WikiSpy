@@ -17,17 +17,13 @@ from CRRoom import *
 from CRRoomIntakeSubject import *
 from CRRoomIntakeWorker import *
 
-import sched, time, datetime
-
-Scheduler = sched.scheduler(time.time, time.sleep)
-
 # The Chinese Room Abstract Stack Machine (Crabs) A=A*B expression root.
 class CRAbs(CRRoom):
   # Constants
   StateMonitoring = 1     #< State: Monitoring.
   StateShuttingDown = 2   #< State: Shutting down.
   
-  def __init__(self):
+  def __init__(self, Command = None):
     self.NIDCount = 0                 #< The total number of CRNodes.
     self.HumanCount = 0               #< The count of new Humans in the Room.
     self.DeviceCount = 0              #< The CRDevice count.
@@ -40,11 +36,10 @@ class CRAbs(CRRoom):
     self.Cursor = 0                   #< The cursor location in the current Crabs expression.
     self.State = self.StateMonitoring #< The Process state.
     self.Clipboard = None             #< Copy & paste clipboard.
-    CRRoom.__init__(self, self, "Crabs")
-    self.Test()
+    CRRoom.__init__(self, self, "Crabs", Command)
   
   # Function resest the DepthCounter.
-  def DepthCounterReset(Self, Crabs, Command, Cursor):
+  def DepthCounterReset(self, Crabs, Command, Cursor):
     self.DepthCounter = 0
     return None
   
@@ -57,7 +52,7 @@ class CRAbs(CRRoom):
     if len(self.Stack) == 0:
       return ""
     Top = self.Stack.pop()
-    Top.COut("< @" + str(datetime.datetime.now()).replace(" ", ";") + "\n")
+    Top.COut("< @" + str(datetime.datetime.now()).replace(' ', ';') + '\n')
     Top.Command(self, Command, Cursor)
     self.Top = Top
     self.DepthCounter -= 1
@@ -70,12 +65,17 @@ class CRAbs(CRRoom):
 
   # Pushes this node onto the stack.
   def Push(self, Node, Command = None, Cursor = 0):
-    if Node == None: return ">< Error Attempted to push a nil Node. <"
+    if Node == None: return None
     self.COut("> -" + str(Node.NID) + " ")
     self.Stack.append(self.Top)
     self.Top = Node
     self.DepthCounter += 1
     return Node.Command(self, Command, Cursor)
+
+  # Pushes the Node onto the stack and pops it back off again.
+  def PushPop(self, Node, Command = None, Cursor = 0):
+    self.Push(Node, Command, Cursor)
+    self.Pop(Command, Cursor)
 
   # Pushes this node onto the stack.
   def PushNID(self, NID, Command = None):
@@ -151,7 +151,7 @@ class CRAbs(CRRoom):
   # Console main loop.
   def ConsoleMain(self):
     COut.Indent(100, "> ><", '\n', '\n')
-    self.COut("? Welcome to WikiSpy and the Chinese Room Abstract Stack (Crabs) Machine. <")
+    self.COut("? Welcome to the Chinese Room Abstract Stack (Crabs) Machine. <")
     self.COut("Enter '?' at any time to get help ")
     self.COut("or press '!'")
     self.COut("or type 'exit' to exit the console.")
@@ -162,8 +162,6 @@ class CRAbs(CRRoom):
         return
       Result = self.Do(UserInput)
       COut.Print(Result)
-      #Result = self.Do(UserInput)
-      #COut.Print(Result)
   
   # Enters the monitoring state.
   def MonitorBegin(self):
@@ -183,24 +181,6 @@ class CRAbs(CRRoom):
   def StateShutDownHandle(self):
     self.COut("Shutting down...")
   
-  # Function that is called every x seconds to update everything.
-  def Update(self):
-    Handler = {
-      1: self.StateMonitorHandle,
-      2: self.StateShutDownHandle
-    }
-    # Get the function from switcher dictionary
-    Key = Handler.get(self.State, lambda: "Invalid state")
-    # Execute the function
-    Key()
-    self.PrintStats()
-    Scheduler.enter(1, 1, self.Update, ())
-  
   # Super-user Do.
   def Do(self, Command, Cursor = 0):
     return self.Command(self, Command, Cursor)
-  
-  def Test(self):
-    print("? Testing Crabs. <\n\n")
-    # Test me!
-    print("? Done testing Crabs. <\n\n")

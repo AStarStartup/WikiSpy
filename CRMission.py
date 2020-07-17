@@ -16,3 +16,6 @@ class CRMission(CRNode):
   # Creates a Duck.
   def __init__(self, Crabs, Type = "Mission"):
     CRNode.__init__(self, Crabs, Crabs.MIDNext(), Type)
+  
+  def PrintStats(self, String = '', SelfKey = ''):
+    String += '\nMission: ' + self.Statement

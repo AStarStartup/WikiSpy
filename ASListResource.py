@@ -15,7 +15,8 @@ from CRNode import *
 """
 class ASListResource(CRNode):
 
-  def __init__(self, Crabs, TypeID = 0, Type = "ListResource"):
+  def __init__(self, Crabs, TypeID = 0, Type = 'List.Resource', 
+               Command = None, Cursor = 0):
     CRNode.__init__(self, Crabs, 1, Type)
     self.Resources = {}
   

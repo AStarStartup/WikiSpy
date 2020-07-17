@@ -15,7 +15,8 @@ from CRNode import *
 """
 class ASListRevenue(CRNode):
 
-  def __init__(self, Crabs, TypeID = 0, Type = "ListRevenue"):
+  def __init__(self, Crabs, TypeID = 0, Type = 'ListRevenue', 
+               Command = None, Cursor = 0):
     CRNode.__init__(self, Crabs, 1, Type)
     self.ListRevenues = {}
   

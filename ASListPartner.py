@@ -15,7 +15,8 @@ from CRNode import *
 """
 class ASListPartner(CRNode):
 
-  def __init__(self, Crabs, TypeID = 0, Type = "ListPartner"):
+  def __init__(self, Crabs, TypeID = 0, Type = 'List.Partner', 
+               Command = None, Cursor = 0):
     CRNode.__init__(self, Crabs, 1, Type)
     self.Partners = {}
   

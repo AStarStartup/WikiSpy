@@ -1,13 +1,12 @@
-import unittest
 from Stringf import *
-from CRRoom import * 
+from CRMission import * 
 
-class TestChineseRoomAbstractStackMachine(unittest.TestCase):
+class TestCR(CRMission):
 
-  def test_CR(self):
-    CRAbs.Test(self)
-    print ("> Crabs Test")
+  def __init__(self, Crabs):
+    CRNode.__init__(self, Crabs, 'MissionTestCRAbs')
+    print ("> CRAbs Test")
     #self.Do("Intake > ?")
     #wikipedia.search("Foo")
-    print ("< ? Done testing Crabs. <")
+    print ("< ? Done testing CRAbs. <")
   
