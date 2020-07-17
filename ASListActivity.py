@@ -15,8 +15,8 @@ from CRNode import *
 """
 class ASListActivity(CRNode):
 
-  def __init__(self, Crabs, TypeID = 0, Type = "ListActivity"):
-    CRNode.__init__(self, Crabs, 1, Type)
+  def __init__(self, Crabs, TypeID = 0, Command = None, Cursor = 0):
+    CRNode.__init__(self, Crabs, 1, 'List.Activity')
     self.Activities = {}
   
   def Print(self):

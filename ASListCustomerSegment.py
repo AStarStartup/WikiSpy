@@ -15,7 +15,8 @@ from CRNode import *
 """
 class ASListCustomerSegment(CRNode):
 
-  def __init__(self, Crabs, TypeID = 0, Type = "ListCustomerSegments"):
+  def __init__(self, Crabs, TypeID = 0, Type = 'List.Customer.Segments', 
+               Command = None, Cursor = 0):
     CRNode.__init__(self, Crabs, 1, Type)
     self.CustomerSegments = {}
   

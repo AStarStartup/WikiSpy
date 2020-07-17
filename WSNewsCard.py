@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # WikiSpy @version 0.x
 # @link    https://github.com/AStarStartup/WikiSpy.git
-# @file    /WSWiki.py
+# @file    /WSNewsCard.py
 # @author  Cale McCollough <https://CookingWithCale.github.io>
 # @license Copyright 2020 (C) Kabuki Starship <kabukistarship.com>. This Source 
 # Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a 
@@ -11,9 +11,10 @@
 
 from CRNodeWeb import *
 
-class WSWiki(CRNodeWeb):
-  def __init__(self, Crabs, URL = 'wikipedia.org'):
-    CRNodeWeb.__init__(self, Crabs, URL, 0, 'Wiki')
-  
-  def PrintStats(self, StringRep = '', SelfName = ''):
-    StringRep += 'Wiki:' + self.Meta['URL']
+class WSNewsCard(CRNodeWeb):
+
+  def __init__(self, Crabs, URL, Command = '',
+               Cursor = 0):
+    CRNodeWeb.__init__(self, Crabs, URL, 0, 'NewsCard', Command,
+               Cursor)
+    

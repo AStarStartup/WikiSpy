@@ -13,16 +13,15 @@
 ***Participating Actors***
 
 Initiated by Jeff.
-Communicates with Will.
 
 ***Entry Condition***
 
-1. Jeff needs to check if a Wikipedia article has been tampered with.
+1. Jeff needs to check if a Wikipedia article "Far-right" has been tampered with.
 
 ***Flow of Events***
 
-1. Jeff copies and pastes the Wikipedia article address into WikiSpy.
-  A. WikiSpy checks if the article has been tampered with and loads the Article Widget.
+1. Jeff copies and pastes "Far-right" into the WikiSpy search bar and presses ButtonSearch.
+  A. WikiSpy checks if the article has been tampered with and loads the ScreenArticle.
 2. Jeff types in "foo baby".
   B. WikiSpy responds with "Ooooo yeah baby!"
 

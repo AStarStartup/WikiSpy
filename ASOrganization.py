@@ -9,43 +9,21 @@
 # copy of the MPL was not distributed with this file, you can obtain one at 
 # <https://mozilla.org/MPL/2.0/>.
 
-from ASListActivity import *
-from ASListChannel import *
-from ASListCost import *
-from ASListCustomerRelationship import *
-from ASListCustomerSegment import *
-from ASListPartner import *
-from ASListResource import *
-from ASListRevenue import *
-from ASListValueProposition import *
+from ASBusinessModel import *
 
-"""A Organization with business model canvas.
+"""A Organization with 'business' model canvas.
 """
 class ASOrganization(CRNode):
 
-  def __init__(self, Crabs, TypeID = 0, Type = "Org"):
-    CRNode.__init__(self, Crabs, 1, "Org")
-    self.Activities = ASListActivity()
-    self.Channels = ASListChannel ()
-    self.Costs = ASListCost ()
-    self.CustomerRelationships = ASListCustomerRelationship ()
-    self.CustomerSegments = ASListCustomerSegment ()
-    self.Partners = ASListPartner ()
-    self.Resources = ASListResource ()
-    self.RevenueStreams = ASListRevenue ()
-    self.ValuePropositions = ASListValueProposition ()
-    self.StateNext = None #< Pointer to the next State
+  def __init__(self, Crabs, Type = 'Org', Command = None, Cursor = 0):
+    CRNode.__init__(self, Crabs, 1, 'Org')
+    self.BusinessModel = ASBusinessModel (Crabs, Command, Cursor)
   
-  def Print(self):
-    self.Activities.Print()
-    self.Channels.Print()
-    self.Costs.Print()
-    self.CustomerRelationships.Print()
-    self.CustomerSegments.Print()
-    self.Partners.Print()
-    self.Resources.Print()
-    self.RevenueStreams.Print()
-    self.ValuePropositions.Print()
+  # Prints this node's stats to the String.
+  # @param SelfKey This object's name is stored in the parent's Meta.
+  def PrintStats(self, String = '', SelfKey = None):
+    CRNode.PrintStats(self, String, SelfKey)
+    self.BusinessModel.PrintStats(String, 'Org')
   
   # Super-user Do.
   def Do(self, Command, Cursor = 0):
